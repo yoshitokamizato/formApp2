@@ -15,5 +15,9 @@ Rails.application.routes.draw do
   patch '/user/:id', to: 'user#update'
   post '/user', to: 'user#create'
 
+  get '/user/search', to: 'user#search'
+  post '/user/searchid', to: 'user#searchId'
+  post '/user/searchdata', to: 'user#searchData'
+
 
 end
