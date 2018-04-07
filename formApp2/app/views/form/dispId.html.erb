@@ -1,0 +1,6 @@
+
+<% @form.each do |form|  %>
+<p><%= form.id %>：<%= form.food %>：<%= form.sports %>：<%= form.book %></p>
+<% end %>
+
+<%= link_to '再検索', '/test/search' %>

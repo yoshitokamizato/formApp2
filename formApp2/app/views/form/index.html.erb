@@ -1,0 +1,25 @@
+<h2>登録フォーム</h2>
+<%= form_tag('/params', method: :post) do %>
+  <div class="text">
+    <p>好きな料理を入力：<%= text_field_tag :food, '', placeholder: '例）チャーハン' %></p>
+    <p>好きなスポーツ：<%= text_field_tag :sports, '', placeholder: '例）フットサル' %></p>
+    <p>好きな本：<%= text_field_tag :book, '', placeholder: '例）Ruby on Rails' %></p>
+    <hr/>
+    <p>ステーキ：<%= check_box 'food2', '', {}, "ステーキ", false %></p>
+    <p>天ぷら：<%= check_box 'food2', '', {}, "天ぷら", false %></p>
+    <p>寿司：<%= check_box 'food2', '', {}, "寿司", false %></p>
+    <hr/>
+    <p><%= check_box_tag(:pet_dog, "dog") %><%= label_tag(:pet_dog, "I own a dog") %></p>
+    <p><%= check_box_tag(:pet_cat, "cat") %><%= label_tag(:pet_cat, "I own a cat") %></p>
+    <hr/>
+    <h2>ラジオボタン</h2>
+    <p>男性：<%= radio_button 'gender', '', '男性'  %></p>
+    <p>女性：<%= radio_button 'gender', '', '女性', {:checked => true} %></p>
+    <hr/>
+    <h2>セレクトボックス</h2>
+    <p><%= select_tag 'programming', options_for_select([["Java", "Java"],["PHP", "PHP"],["Python", "Python"],["Ruby",  "Ruby"]]) %></p>
+  </div>
+  <hr/>
+
+  <p><%= submit_tag "送信" %></p>
+<% end %>

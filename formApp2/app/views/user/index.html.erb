@@ -1,0 +1,28 @@
+<h1>スキルシート</h1>
+<hr/>
+<%= form_tag('/user', method: :post) do %>
+  <div class="text">
+    <h2>基本情報</h2>
+    <p>お名前：<%= text_field_tag :name, '' %></p>
+    <p>年齢：<%= text_field_tag :age, '' %></p>
+    <p>お住まい：<%= select_tag 'address', options_for_select([["関東", "関東"],["関西", "関西"],["九州", "九州"],["北海道",  "北海道"],["東北",  "東北"]]) %></p>
+    <label><p>男性：<%= radio_button 'gender', '', '男性'  %></p></label>
+    <label><p>女性：<%= radio_button 'gender', '', '女性', {:checked => true} %></p></label>
+    <p>得意言語：<%= text_field_tag :program, '' %></p>
+    <hr/>
+    <h2>スキルチェック</h2>
+    <p>HTML/CSS：<%= check_box 'skils', '', {}, "HTML/CSS", false %></p>
+    <p>jQuery：<%= check_box 'skils', '', {}, "jQuery", false %></p>
+    <p>Java：<%= check_box 'skils', '', {}, "Java", false %></p>
+    <p>Ruby：<%= check_box 'skils', '', {}, "Ruby", false %></p>
+    <p>PHP：<%= check_box 'skils', '', {}, "PHP", false %></p>
+    <p>Photoshop：<%= check_box 'skils', '', {}, "Photoshop", false %></p>
+    <p>Illustrator：<%= check_box 'skils', '', {}, "Illustrator", false %></p>
+    <p>MySQL：<%= check_box 'skils', '', {}, "MySQL", false %></p>
+    <hr/>
+  </div>
+  <div class="btn-wrapper">
+    <p><%= submit_tag "送信", :class=>"btn" %></p>
+  </div>
+
+<% end %>

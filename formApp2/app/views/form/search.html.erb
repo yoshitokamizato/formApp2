@@ -1,0 +1,12 @@
+
+<p><%= h(flash[:notice]) %></p>
+<%= form_tag('/test/disp', method: :get) do %>
+    <p>開始：<%= text_field_tag :id1, '' %></p>
+    <p>終了：<%= text_field_tag :id2, '' %></p>
+    <p><%= submit_tag "検索" %></p>
+<% end %>
+<hr>
+<%= form_tag('/test/food', method: :get) do %>
+    <p>語句検索：<%= text_field_tag :food, '' %></p>
+    <p><%= submit_tag "検索" %></p>
+<% end %>

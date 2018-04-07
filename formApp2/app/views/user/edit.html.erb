@@ -1,0 +1,14 @@
+<%= form_tag("/user/#{@user.id}", method: :patch) do %>
+  <h3>編集</h3>
+  <p>お名前：<input type="text" name="name" value="<%= @user.name %>" ></p>
+  <p>年齢：<input type="text" name="age" value="<%= @user.age %>" ></p>
+  <p>お住まい：<input type="text" name="address" value="<%= @user.address %>" ></p>
+  <p>性別：<input type="text" name="gender" value="<%= @user.gender %>" ></p>
+  <p>得意言語：<input type="text" name="program" value="<%= @user.program %>" ></p>
+  <p>スキル：<input type="text" name="skils" value="<%= @user.skils %>" ></p>
+  <hr/>
+  <div class="btn-wrapper">
+    <p><%= submit_tag "送信", :class=>"btn" %></p>
+  </div>
+
+<% end %>

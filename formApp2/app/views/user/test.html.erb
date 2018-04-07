@@ -1,0 +1,25 @@
+<% @users.each do |user| %>
+  <p>ユーザID：<%= user.id %></p>
+  <p>お名前：<%= user.name %></p>
+  <p>年齢：<%= user.age %></p>
+  <p>住所：<%= user.address %></p>
+  <p>性別：<%= user.gender %></p>
+  <p>勉強中の言語：<%= user.program %></p>
+  <p>スキル：<%= user.skils %></p>
+  <p><%= link_to '編集', "/user/#{user.id}/edit", method: :get %></p>
+  <hr/>
+<% end %>
+
+
+
+    users.each do |user|
+      @text += "<p>ユーザID：#{user.id}</p>"
+      @text += "<p>お名前：#{user.name} </p>"
+      @text += "<p>年齢：#{user.age} </p>"
+      @text += "<p>住所：#{user.address}</p>"
+      @text += "<p>性別：#{user.gender}</p>"
+      @text += "<p>勉強中の言語：#{user.program}</p>"
+      @text += "<p>スキル：#{user.skils}</p>"
+      @text += "<p><a href=&quot;/user/#{user.id}/edit&quot; data-method=&quot;get&quot; >編集</a></p>"
+      @text += "<hr/>"
+    end
