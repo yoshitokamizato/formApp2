@@ -1,0 +1,5 @@
+<% @user.each do |user|  %>
+  <p><%= user.id %>：<%= user.name %>：<%= user.age %>：<%= user.address %>：<%= user.gender %>：<%= user.program %>：<%= user.skils %></p>
+<% end %>
+
+<%= link_to '再検索', '/test/search' %>
